@@ -51,7 +51,7 @@ namespace CatsVsDogs.Api
             services.AddPredictionEnginePool<ModelInput, ModelOutput>()
                 .FromFile(modelName: "ImageModel",
                     filePath:
-                    "C:\\Users\\User\\RiderProjects\\CatVsDogsBinaryClassification\\CatsVsDogs.Api\\MLModel\\model.zip",
+                    "C:\\Users\\User\\RiderProjects\\CatsVsDogsBinaryClassification\\CatsVsDogs.Api\\MLModel\\model.zip",
                     watchForChanges: true);
 
             services.AddDbContext<AppDbContext>(options =>
