@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using CatsVsDogs.Infrastructure.Extensions;
 
 namespace CatsVsDogs.Api
 {
@@ -13,7 +14,7 @@ namespace CatsVsDogs.Api
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            CreateHostBuilder(args).Build().MigrateDatabases().Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

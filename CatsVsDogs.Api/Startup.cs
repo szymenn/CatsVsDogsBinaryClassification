@@ -39,6 +39,7 @@ namespace CatsVsDogs.Api
 
             var projectDirectory = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "../../../"));
 
+
             services.AddCors(options =>
                 {
                     options.AddPolicy(name: "Client",
@@ -51,11 +52,11 @@ namespace CatsVsDogs.Api
             services.AddPredictionEnginePool<ModelInput, ModelOutput>()
                 .FromFile(modelName: "ImageModel",
                     filePath:
-                    "C:\\Users\\User\\RiderProjects\\CatsVsDogsBinaryClassification\\CatsVsDogs.Api\\MLModel\\model.zip",
+                    "MLModel/model.zip",
                     watchForChanges: true);
 
             services.AddDbContext<AppDbContext>(options =>
-                options.UseNpgsql(Configuration.GetConnectionString(Constants.DbConnection)));
+                options.UseNpgsql(Environment.GetEnvironmentVariable(Constants.DbConnection)));
 
             services.AddScoped<IPredictionRepository, PredictionRepository>();
             services.AddScoped<IPredictionService, PredictionService>();

@@ -1,0 +1,34 @@
+version: '3.4'
+
+networks:
+  catsvsdogs-dev:
+    driver: bridge
+services:
+  catsvsdogs-backend:
+    image: catsvsdogs-backend
+    depends_on:
+      - "postgres_image"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+    environment:
+      PredictionHistoryDbConnection: "Host=postgres_image;Database=PredictionHistory;Username=postgres;Password=123hehe"
+    networks:
+      - catsvsdogs-dev
+  postgres_image:
+    image: postgres:latest
+    ports:
+      - "5432"
+    restart: always
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "123hehe"
+      POSTGRES_DB: "postgres_image"
+    networks:
+      - catsvsdogs-dev
+volumes:
+  db_volume:
+         
+    
