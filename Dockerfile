@@ -19,5 +19,6 @@ EXPOSE 5432
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /app
+COPY CatsVsDogs.Api/MLModel/model.zip .
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "CatsVsDogs.Api.dll"]

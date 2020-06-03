@@ -52,7 +52,7 @@ namespace CatsVsDogs.Api
             services.AddPredictionEnginePool<ModelInput, ModelOutput>()
                 .FromFile(modelName: "ImageModel",
                     filePath:
-                    "MLModel/model.zip",
+                    "model.zip",
                     watchForChanges: true);
 
             services.AddDbContext<AppDbContext>(options =>
@@ -73,8 +73,6 @@ namespace CatsVsDogs.Api
             }
 
             
-            app.UseHttpsRedirection();
-
             app.UseRouting();
 
             app.UseCors("Client");
