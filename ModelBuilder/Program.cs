@@ -65,43 +65,6 @@ namespace ModelBuilder
 
             var trainedModel = trainingPipeline.Fit(trainSet);
             mlContext.Model.Save(trainedModel, trainData.Schema, "model.zip");
-//            DataViewSchema schema;
-////            var loadedModel = mlContext.Model.Load(Path.Combine(projectDirectory, "Model.zip"), out schema);
-//
-////            var predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(loadedModel);
-////            var predictValues = testSet.Schema.Take(10);
-//
-//            var predictionEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(trainedModel);
-//
-//            var testImages = LoadImagesFromDirectory(Path.Combine(projectDirectory, "Data\\test1"));
-//            var testData = mlContext.Data.LoadFromEnumerable(testImages);
-//
-//            var preProcessedTestData = preprocessingPipeline.Fit(testData).Transform(testData);
-//            var predictionData = trainedModel.Transform(preProcessedTestData);
-//
-//            var predictions = mlContext.Data.CreateEnumerable<ModelOutput>(predictionData, reuseRowObject: true).Take(1);
-//
-//            Console.WriteLine("Classifying our cat");
-//            foreach (var prediction in predictions)
-//            {
-//                Console.WriteLine
-//                    ($"Image: {Path.GetFileName(prediction.ImagePath)}, Actual Value: {prediction.Label} | Predicted Value: {prediction.PredictedLabel}");
-//            }
-//            
-//            // IDataView predictionData = trainedModel.Transform(mlContext.Data.ShuffleRows(testSet));
-//
-//            // IEnumerable<ModelOutput> predictions = mlContext.Data
-//            //     .CreateEnumerable<ModelOutput>(predictionData, reuseRowObject: true).Take(1);
-//
-//            // Console.WriteLine("Classifying multiple images");
-//            // foreach (var prediction in predictions)
-//            // {
-//            //     Console.WriteLine
-//            //         ($"Image: {Path.GetFileName(prediction.ImagePath)}, Actual Value: {prediction.Label} | Predicted Value: {prediction.PredictedLabel}");
-//            // }
-//            
-            
-            
 
             Console.ReadLine();
         }
