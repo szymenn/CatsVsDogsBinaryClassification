@@ -15,5 +15,9 @@ Client app that's using this Web API can be found in (this repository)[https://g
 Prerequisites:
 - Docker
 
-To run app simply clone repository using <br /> 
+To run app simply clone repository using: <br /> 
 `git clone https://github.com/szymenn/CatsVsDogsBinaryClassification.git`
+Then in main directory build application images using docker compose: <br />
+`docker-compose build`
+and finally start the app: 
+`docker-compose up`
