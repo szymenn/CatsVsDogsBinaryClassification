@@ -16,8 +16,8 @@ Prerequisites:
 - Docker
 
 To run app simply clone repository using: <br /> 
-`git clone https://github.com/szymenn/CatsVsDogsBinaryClassification.git`
+`git clone https://github.com/szymenn/CatsVsDogsBinaryClassification.git` <br />
 Then in main directory build application images using docker compose: <br />
-`docker-compose build`
-and finally start the app: 
+`docker-compose build` <br />
+and finally start the app: <br />
 `docker-compose up`
