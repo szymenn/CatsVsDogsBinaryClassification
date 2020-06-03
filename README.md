@@ -17,7 +17,7 @@ Client app that's using this Web API can be found in [this repository](https://g
 - Entity Framework Core 
 - PostgreSQL
 - Docker
-### Run app on your computer
+### Run on your computer
 Prerequisites:
 - Git
 - Docker
