@@ -12,5 +12,5 @@ Client app that's using this Web API can be found in (this repository)[https://g
 - PostgreSQL
 - Docker
 ### Run app on your computer
-To run app simply clone repository using
+To run app simply clone repository using <br /> 
 `git clone https://github.com/szymenn/CatsVsDogsBinaryClassification.git`
