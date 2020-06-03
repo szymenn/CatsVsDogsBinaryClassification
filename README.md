@@ -38,9 +38,11 @@ and finally start the app: <br />
 Application consists of two endpoints, one for getting prediction history and one for predicting data based on the input picture. <br />
 
 To get prediction history run this using your prefered client (postman, fidler etc.): <br />
+
 `HTTP GET http://localhost:5000/api/prediction`
 
 To get prediction based on input picture run this with picture included within the request: <br />
+
 `HTTP POST http://localhost:5000/api/prediction`
 
 
